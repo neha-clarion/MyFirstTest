@@ -1,0 +1,25 @@
+<%= form_for @profile do |f| %> 
+ <% if @profile.present? && @profile.errors.any? %>
+  <div id="error_explanation">
+    <h5 style="color:DarkRed"><%= pluralize(@profile.errors.count, "error") %> prohibited
+      this profile from being saved:</h5>
+    <ul>
+    <% @profile.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </p>
+     
+  <p>
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
