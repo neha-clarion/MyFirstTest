@@ -5,13 +5,13 @@
   <li> <b>User_Email-address:- <%= current_user.email %></b> </li>
 </ul>
 
-</p>
 <table>
   <tr>
     <th>Address</th>
     <th>Phone_number</th>
     <th colspan="3">Actions</th>
   </tr>
+  
   <% @profiles.each do |profile| %>
     <tr>
       <td><%= profile.address %></td>
